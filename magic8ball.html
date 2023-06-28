@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>Ask your question, we show the answer</div>
+    <button>Show the answer</button>
+    <div class="message"></div>
+
+    <script>
+    
+        const answerArray=[
+            'it sounds to be okay',
+            'Ask me again later',
+            'Sounds to be good',
+            'All point to YES!',
+            'No',
+
+        ]
+
+        const message=document.querySelector('.message')
+        const button=document.querySelector('button')
+        button.addEventListener('click', function(){
+            let res=Math.floor(Math.random()*answerArray.length)
+            message.innerHTML=answerArray[res]
+
+        })
+     
+    </script>
+</body>
+</html>
